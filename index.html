@@ -603,11 +603,26 @@
             line-height: 1.5;
         }
 
+        .rewrite {
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .rewrite a {
+            color: #46517b;
+            text-decoration: none;
+            border-bottom: 1px solid #46517b;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+        }
+
     </style>
 
     <div class="wrapper">
         <div class="form_wrap">
-            <img src="logo.png" class="logo">
+            <img src="logo.png" class="logo" id="top">
             <h1><img src="text.svg" alt="ナビゲーターのココガスキー"></h1>
 
             <div class="description">
@@ -636,7 +651,7 @@
                 </div>
             </div>
 
-            <a class="btn off" id="update" href="#">画像を作成する！</a>
+            <a class="btn off" id="update" href="/">画像を作成する！</a>
         </div>
 
         <style>
@@ -652,8 +667,9 @@
                 <canvas id="result" width="800" height="1200"></canvas>
             </div>
             <p class="note">※画像に曲名が表示されていない場合は<br>もう一度「画像を作成する！」を押してください。</p>
+            <p class="rewrite"><a href="#top">画像を作り直す</a></p>
             <div class="columnbtn">
-                <a href="#" class="btn" id="saveform">画像を保存</a>
+                <a href="/" class="btn" id="saveform">画像を保存</a>
                 <a href="https://twitter.com/share?url=https%3A%2F%2Foharu-st.github.io%2Fnavigator_generator%2F&text=%E3%80%90%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F%E3%82%92%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%A6%E3%81%AD%EF%BC%81%E3%80%91%23%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%B3%E3%82%B3%E3%82%AC%E3%82%B9%E3%82%AD%E3%83%BC%20SixTONES%20%2F%20NAVIGATOR" target="_blank" class="btn" onclick="ga('send', 'event', 'click', 'https://twitter.com/share')">twitterでシェア</a>
             </div>
             <a id="download-image">images DL</a>
@@ -820,7 +836,7 @@
                     let canvas = document.getElementById('result');
                     let base64 = canvas.toDataURL();
                     let blob = base64toBlob(base64);
-                    let dlFileName = 'bias_' + (new Date()).getTime() + '.png';
+                    let dlFileName = 'navigator_' + (new Date()).getTime() + '.png';
 
                     let a = document.getElementById('download-image');
                     a.href = window.URL.createObjectURL(blob);
@@ -828,6 +844,18 @@
                     a.click();
                     return false;
                 });
+            });
+
+            $('a[href^="#"]').click(function() {
+                // スクロールの速度
+                var speed = 1000; // ミリ秒で記述
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $('body,html').animate({
+                    scrollTop: position
+                }, speed, 'swing');
+                return false;
             });
         })(jQuery);
 
