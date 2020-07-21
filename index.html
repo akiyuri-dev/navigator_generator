@@ -703,20 +703,22 @@
                 textCheck();
             }
             var textCheck = function() {
-                var len02 = $('#txt02').val().length
-                var $count_txt02 = $('.count_txt02');
-                var max02 = $count_txt02.find('.max').text() * 1;
-                $('.count_txt02').find('.num').text(len02);
-                if (len02 > max02) {
-                    $count_txt02.addClass('red');
-                } else {
-                    $count_txt02.removeClass('red');
-                }
-                if (len02 > 0 && $('.count').hasClass('red') === false && $('select').val() != 'none') {
-                    $('#update').removeClass('off');
-                } else {
-                    $('#update').addClass('off');
-                }
+                $("#txt02").on("keydown keyup keypress change", function () {
+                    var len02 = $('#txt02').val().length
+                    var $count_txt02 = $('.count_txt02');
+                    var max02 = $count_txt02.find('.max').text() * 1;
+                    $('.count_txt02').find('.num').text(len02);
+                    if (len02 > max02) {
+                        $count_txt02.addClass('red');
+                    } else {
+                        $count_txt02.removeClass('red');
+                    }
+                    if (len02 > 0 && $('.count').hasClass('red') === false && $('select').val() != 'none') {
+                        $('#update').removeClass('off');
+                    } else {
+                        $('#update').addClass('off');
+                    }
+                });
             }
 
             var preloadImages = function(srcs) {
