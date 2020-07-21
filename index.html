@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TMBMP8S');
+
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ナビゲーターのココガスキー</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet" />
+
+    <meta name="description" content="ナビゲーターのココガスキー">
+    <meta property="og:title" content="ナビゲーターのココガスキー">
+    <meta property="og:description" content="ナビゲーターのココガスキー">
+    <meta property="og:image" content="https://oharu-st.github.io/navigator_generator/ogp.png">
+    <meta property="og:url" content="https://oharu-st.github.io/navigator_generator/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ナビゲーターのココガスキー">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://oharu-st.github.io/navigator_generator/ogp.png">
+    <!-- /Twitter Card -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84330991-2"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84330991-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-84330991-3');
+
+    </script>
+
+</head>
+
+<body>
+    <style>
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        html,
+        body {
+            background-color: #c9daf4;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif !important;
+            font-size: 100%;
+            color: #46517b;
+            padding-top: 10%;
+        }
+
+        select,
+        input,
+        textarea,
+        p,
+        a {
+            font-family: 'Noto Sans JP', sans-serif !important;
+        }
+
+        .wrapper {
+            padding: 0 8%;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 6% 0;
+            letter-spacing: 1px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        canvas {
+            width: 100%;
+            height: auto;
+        }
+
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 11px 15px;
+            margin-bottom: 8%;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            outline: none;
+            background-color: #fff;
+            font-size: 16px;
+        }
+
+        textarea:focus {
+            border-color: #46517b;
+        }
+
+        .form p {
+            font-size: 12px;
+            line-height: 1.5;
+            text-align: left;
+            margin-bottom: 2%;
+        }
+
+        .form input {
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+            padding: 11px 15px;
+            border: 2px solid #E6E6E6;
+            border-radius: 5px;
+            outline: none;
+            background-color: #fff;
+            font-size: 16px;
+
+        }
+
+        .form input:focus {
+            border-color: #46517b;
+        }
+
+        .form .column {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .column .count {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 10px;
+            vertical-align: bottom;
+        }
+
+        .column .count.red {
+            color: #f00;
+        }
+
+        .column .count .num {
+            font-size: 15px;
+        }
+
+        /*select {
+            width: 100%;
+            font-size: 12px;
+            padding: 2px 2px 6px;
+        }*/
+        [include*="form-input-select()"] {
+            display: block;
+            padding: 0;
+            position: relative;
+            display: block;
+            border-radius: 5px;
+            box-shadow: none;
+            font-size: 16px;
+            margin-top: 9px;
+            margin-bottom: 15px;
+            width: 100%;
+            background-color: #fff;
+            color: #161619;
+        }
+
+        [include*="form-input-select()"]::before,
+        [include*="form-input-select()"]::after {
+            content: '';
+            display: block;
+            position: absolute;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        [include*="form-input-select()"] select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: none;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0;
+            border: 1px solid transparent;
+            font-size: 16px;
+            outline: none;
+            /* Focus style */
+        }
+
+        [include*="form-input-select()"] select:focus {
+            background-color: #fff;
+            outline: none;
+        }
+
+        [include*="form-input-select()"] option {
+            font-weight: normal;
+        }
+
+        [include*="form-input-select()"] x:-o-prefocus,
+        [include*="form-input-select()"]::after {
+            display: none;
+        }
+
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
+            [include*="form-input-select()"] select::-ms-expand {
+                display: none;
+            }
+
+            [include*="form-input-select()"] select:focus::-ms-value {
+                background: transparent;
+                color: #000;
+            }
+        }
+
+        @-moz-document url-prefix() {
+            [include*="form-input-select()"] {
+                overflow: hidden;
+            }
+
+            [include*="form-input-select()"] select {
+                width: 120%;
+                width: calc(100% + 3em);
+                /* Firefox focus has odd artifacts around the text, this kills that. See https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-focusring */
+            }
+
+            @supports (-moz-appearance: none) {
+                [include*="form-input-select()"] select {
+                    width: 100%;
+                }
+            }
+
+            [include*="form-input-select()"] select:-moz-focusring {
+                color: transparent;
+                text-shadow: 0 0 0 #000;
+            }
+        }
+
+        @supports (-moz-appearance: none) {
+            [include*="form-input-select()"] {
+                width: 100%;
+            }
+        }
+
+        [include*="form-input-select()"]::before,
+        [include*="form-input-select()"]::after {
+            content: '';
+            display: block;
+            position: absolute;
+            pointer-events: none;
+            border: 1px solid transparent;
+            width: 0;
+            height: 0;
+            right: 16px;
+        }
+
+        [include*="form-input-select()"]::before {
+            bottom: 55%;
+            border-width: 0 6.5px 8px 6.5px;
+            border-bottom-color: #161619;
+        }
+
+        [include*="form-input-select()"]::after {
+            border-width: 8px 6.5px 0 6.5px;
+            border-top-color: #161619;
+            top: 55%;
+        }
+
+        @-moz-document url-prefix() {
+            [include*="form-input-select()"] {
+                border-right: 3px solid #E6E6E6;
+            }
+
+            [include*="form-input-select()"]:hover {
+                border-right: 3px solid #46517b;
+            }
+        }
+
+        [include*="form-input-select()"]:hover select {
+            border-color: #46517b;
+        }
+
+        [include*="form-input-select()"]:hover select:focus {
+            outline-color: transparent;
+        }
+
+        [include*="form-input-select()"]:hover::before {}
+
+        [include*="form-input-select()"]:hover::after {}
+
+        [include*="form-input-select()"] select {
+            border-radius: 5px;
+            font-weight: 400;
+            color: inherit;
+            padding: 11px 15px;
+            line-height: normal;
+            -webkit-transition: border-color 0.2s ease, outline 0.2s ease;
+            transition: border-color 0.2s ease, outline 0.2s ease;
+        }
+
+        [include*="form-input-select()"] select:focus {
+            outline: 3px solid #46517b;
+            outline-offset: -3px;
+        }
+
+        [include*="form-input-select()"] select[disabled],
+        [include*="form-input-select()"] select:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        [include*="form-input-select()"] select:not(:focus):invalid {}
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        .btn {
+            margin: 0 auto 16%;
+            border-width: 2px;
+            border-color: #fff;
+            color: #46517b;
+            border-style: solid;
+            width: 75%;
+            height: 38px;
+            line-height: 35px;
+            border-radius: 40px;
+            vertical-align: middle;
+            font-size: 14px;
+            display: inline-block;
+            text-decoration: none;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+            opacity: 1;
+            background: #fff;
+            box-shadow: -7.314px -6.82px 18px 2px rgba(246, 255, 255, 0.6), 5.736px 8.192px 30px 0px rgba(180, 181, 211, 0.8);
+        }
+
+        .btn.off {
+            opacity: 0.3;
+            box-shadow: 0 0 0 0 rgba(246, 255, 255, 0), 5.736px 8.192px 30px 0px rgba(180, 181, 211, 0);
+        }
+
+        .hide {
+            display: none;
+        }
+
+        #result {
+            margin-bottom: 8%;
+            border: 3px solid #46517b;
+            width: 80%;
+            border-radius: 5px;
+        }
+
+        #download-image {
+            height: 0;
+            display: block;
+            overflow: hidden;
+            visibility: hidden;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #46517b;
+            font-weight: bold;
+            padding: 60px 0 15px;
+        }
+
+        .hide .description {
+            border: none;
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .columnbtn {
+            display: flex;
+        }
+
+        .columnbtn a:first-child {
+            margin-right: 15px;
+        }
+
+        h3 {
+            font-size: 14px;
+            color: #a79556;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        .link {
+            margin-bottom: 16%;
+            font-size: 10px;
+        }
+
+        .link li {
+            margin-bottom: 5px;
+        }
+
+        .link a {
+            color: #46517b;
+            line-height: 1.5;
+        }
+
+        .loadimg {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .form_wrap {
+            border-radius: 50px;
+            background-color: rgb(223, 232, 253);
+            box-shadow: 22.229px 23.019px 87.4px 4.6px rgba(100, 110, 153, 0.6);
+            max-width: 630px;
+            z-index: 7;
+            position: relative;
+            margin: 0 auto;
+            padding: 0 8%;
+        }
+
+        .logo {
+            position: absolute;
+            top: -50px;
+            margin-left: -65px;
+            width: 130px;
+        }
+
+        h1 {
+            padding-top: 85px;
+        }
+
+        h1 img {
+            width: 100%;
+            text-align: center;
+        }
+
+        .note {
+            font-size: 10px;
+            margin-top: -20px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+    </style>
+
+    <div class="wrapper">
+        <div class="form_wrap">
+            <img src="logo.png" class="logo">
+            <h1><img src="text.svg" alt="ナビゲーターのココガスキー"></h1>
+
+            <div class="description">
+                <p>説明テキストテキストテキストテキスト説明テキストテキストテキストテキスト説明テキストテキストテキストテキストテキストテキ</p>
+            </div>
+
+            <div class="form">
+                <div class="column">
+                    <p>曲を選んでください</p>
+                    <div include="form-input-select()">
+                        <select id="bisa" name="bias">
+                            <option value="none">曲を選択</option>
+                            <option value="hikarukizasi">光る、兆し</option>
+                            <option value="hysteria">Hysteria</option>
+                            <option value="japonicastyle">JAPONICA STYLE</option>
+                            <option value="loveu">love u...</option>
+                            <option value="navigator">NAVIGATOR</option>
+                            <option value="youi">You & I</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="column">
+                    <p>その曲への感想・想いなど</p>
+                    <p class="count count_txt02"><span class="num">0</span> / <span class="max">208</span>字</p>
+                    <textarea rows="6" type="text" name="txt02" id="txt02"></textarea>
+                </div>
+            </div>
+
+            <a class="btn off" id="update" href="#">画像を作成する！</a>
+        </div>
+
+        <style>
+            #result {
+                letter-spacing: 3px;
+            }
+
+        </style>
+        <div class="hide">
+            <h2>作成完了！</h2>
+            <p class="description">SNSでシェアする場合は画像を保存の上、<br>シェアボタンをお使いください。</p>
+            <div class="module">
+                <canvas id="result" width="800" height="1200"></canvas>
+            </div>
+            <p class="note">※画像に曲名が表示されていない場合は<br>もう一度「画像を作成する！」を押してください。</p>
+            <div class="columnbtn">
+                <a href="#" class="btn" id="saveform">画像を保存</a>
+                <a href="https://twitter.com/share?url=https%3A%2F%2Foharu-st.github.io%2Fnavigator_generator%2F&text=%E3%80%90%E4%BD%9C%E6%88%90%E3%81%97%E3%81%9F%E7%94%BB%E5%B1%A4%E3%82%92%E6%B7%BB%E4%BB%98%E3%81%97%E3%81%A6%E3%81%AD%EF%BC%81%E3%80%91%20%23%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AE%E3%82%B3%E3%82%B3%E3%82%AC%E3%82%B9%E3%82%AD%E3%83%BC" target="_blank" class="btn" onclick="ga('send', 'event', 'click', 'https://twitter.com/share')">twitterでシェア</a>
+            </div>
+            <a id="download-image">images DL</a>
+            <ul class="link">
+                <li>
+                    <a href='https://jp.freepik.com/free-photos-vectors/background'>Rawpixel.com - jp.freepik.com によって作成された<br> background ベクトル</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <img class="loadimg" src="hikarukizasi.png">
+    <img class="loadimg" src="japonicastyle.png">
+    <img class="loadimg" src="youi.png">
+    <img class="loadimg" src="loveu.png">
+    <img class="loadimg" src="hysteria.png">
+    <img class="loadimg" src="navigator.png">
+    <img class="loadimg" src="card_notext.png">
+    <script src="https://code.createjs.com/easeljs-0.7.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        (function($) {
+
+            var init = function() {
+                $('.loadimg').hide();
+                baseImg = new Image();
+                baseImg.src = 'card_notext.png';
+                iconImg = new Image();
+                stage = new createjs.Stage('result');
+                genImage();
+                stage.update();
+                textCheck();
+            }
+            var textCheck = function() {
+                var len02 = $('#txt02').val().length
+                var $count_txt02 = $('.count_txt02');
+                var max02 = $count_txt02.find('.max').text() * 1;
+                $('.count_txt02').find('.num').text(len02);
+                if (len02 > max02) {
+                    $count_txt02.addClass('red');
+                } else {
+                    $count_txt02.removeClass('red');
+                }
+                if (len02 > 0 && $('.count').hasClass('red') === false && $('select').val() != 'none') {
+                    $('#update').removeClass('off');
+                } else {
+                    $('#update').addClass('off');
+                }
+            }
+
+            var preloadImages = function(srcs) {
+                if (!srcs.length) {
+                    return;
+                }
+                var dfd = $.Deferred();
+                var imgs = [];
+                for (var i = 0, l = srcs.length; i < l; i++) {
+                    var img = new Image();
+                    img.src = srcs[i];
+                    imgs.push(img);
+                }
+                var check = function() {
+                    for (var i = 0, l = imgs.length; i < l; i++) {
+                        if (imgs[i].complete !== true) {
+                            setTimeout(check, 250);
+                            return false;
+                        }
+                    }
+                    dfd.resolve(imgs);
+                };
+                check();
+                return dfd.promise();
+            }
+
+            var genImage = function() {
+                var img = new createjs.Bitmap(baseImg);
+                var icon = new createjs.Bitmap(iconImg);
+                stage.addChild(img);
+
+                var
+                    val = $('select option:selected').val();
+                if ('none' != val) {
+                    iconImg.src = val + '.png';
+                    icon.regX = -240;
+                    icon.regY = -398;
+                    stage.addChild(icon);
+                }
+
+                var txt = {
+                    'txt02': {
+                        'x': 184,
+                        'y': 560,
+                        'size': '24px',
+                        'align': 'left',
+                        'color': '#46517b',
+                        'lineHeight': '40',
+                        'fontweight': 'normal'
+                    }
+                }
+
+                $.each(txt, function(key, value) {
+                    var content = $('#' + key).val();
+
+                    if (key == 'txt02') {
+                        var content = content.replace(/[\r|\r\n|\n]/g, "").replace(/(.{16})/g, "$1" + "\n");
+                    }
+
+                    var obj = new createjs.Text(content);
+
+                    obj.textAlign = value.align;
+                    obj.font = value.fontweight + ' ' + value.size + '/1.5 "Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif';
+                    obj.x = value.x;
+                    obj.y = value.y;
+                    obj.color = value.color;
+                    obj.lineHeight = value.lineHeight;
+
+                    stage.addChild(obj);
+                });
+            }
+
+            $(function() {
+                var srcs = ['card_notext.png', 'japonicastyle.png', 'hikarukizasi.png', 'youi.png', 'loveu.png', 'hysteri.png', 'navigator.png'];
+                $(window).on('load', function() {
+                    preloadImages(srcs).done(function() {
+                        init();
+                    });
+                });
+                $('select,textarea,input').change(function() {
+                    textCheck();
+                });
+
+                $('#update').on('click', function(e) {
+                    e.preventDefault();
+                    if ($(this).hasClass('off')) {
+                        return false;
+                    }
+                    $('.hide').fadeIn();
+                    var speed = 1000;
+                    var target = $('#result');
+                    var position = target.offset().top;
+                    $("html, body").stop().animate({
+                        scrollTop: position
+                    }, speed, "swing");
+                    stage = new createjs.Stage('result');
+                    genImage();
+                    stage.update();
+                });
+
+                $('#saveform').on('click', function(e) {
+                    e.preventDefault();
+                    const base64toBlob = (base64) => {
+                        let tmp = base64.split(',');
+                        let data = atob(tmp[1]);
+                        let mime = tmp[0].split(':')[1].split(';')[0];
+                        let buf = new Uint8Array(data.length);
+                        for (let i = 0; i < data.length; ++i) {
+                            buf[i] = data.charCodeAt(i);
+                        }
+                        let blob = new Blob([buf], {
+                            type: mime
+                        });
+                        return blob;
+                    };
+
+                    let canvas = document.getElementById('result');
+                    let base64 = canvas.toDataURL();
+                    let blob = base64toBlob(base64);
+                    let dlFileName = 'bias_' + (new Date()).getTime() + '.png';
+
+                    let a = document.getElementById('download-image');
+                    a.href = window.URL.createObjectURL(blob);
+                    a.download = dlFileName;
+                    a.click();
+                    return false;
+                });
+            });
+        })(jQuery);
+
+    </script>
+</body>
+
+</html>
