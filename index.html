@@ -206,7 +206,7 @@
             font-family: 'Noto Sans JP', sans-serif !important;
             font-size: 100%;
             color: #46517b;
-            padding-top: 10%;
+            padding-top: 60px;
         }
 
         select,
@@ -808,7 +808,7 @@
                     $('.hide').fadeIn();
                     var speed = 1000;
                     var target = $('#result');
-                    var position = target.offset().top;
+                    var position = target.offset().top - 130;
                     $("html, body").stop().animate({
                         scrollTop: position
                     }, speed, "swing");
